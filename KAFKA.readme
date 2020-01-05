@@ -1,0 +1,41 @@
+=======================================================================
+Links:
+=======================================================================
+	https://zookeeper.apache.org/
+	https://kafka.apache.org/downloads
+
+
+=======================================================================
+Comands prompt: https://kafka.apache.org/uses
+=======================================================================
+
+//Cuidado com espaços - Takecare of spaces
+cd C:\ProjetosIndimeister\kafka\kafka_2.12-2.3.1
+
+******************1 - START SERVER******************
+Windows: .\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+Linux: bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Windows: .\bin\windows\kafka-server-start.bat .\config\server.properties
+Linux: bin/kafka-server-start.sh config/server.properties
+
+******************2 - Create TOPIC******************
+Windows: .\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic NAMEYOURTOPIC
+Linux: bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic NAMEYOURTOPIC
+
+******************3 - Producer******************
+
+Windows: .\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic NAMEYOURTOPIC
+Linux: 
+******************4 - Consumer******************
+
+Windows: .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic NAMEYOURTOPIC --from-beginning
+Linux: 
+
+****************** LIST ******************
+Windows:.\bin\kafka-topics.sh --list --bootstrap-server localhost:9092
+Linux: bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+========================================================================
+
+
