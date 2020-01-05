@@ -23,11 +23,11 @@
 	</build>
 
 	<modules>
-		<module>service-log</module>
 		<module>service-new-order</module>
 		<module>common-kafka</module>
 		<module>service-mail</module>
 		<module>service-frauddetector</module>
+		<module>service-logs</module>
 	</modules>
 
 
